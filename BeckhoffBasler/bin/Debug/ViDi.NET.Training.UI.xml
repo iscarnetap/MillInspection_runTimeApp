@@ -1,0 +1,1010 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ViDi.NET.Training.UI</name>
+    </assembly>
+    <members>
+        <member name="T:ViDi2.Training.UI.AddModelView">
+            <summary>
+            Interaction logic for AddModelView.xaml
+            </summary>
+            <summary>
+            AddModelView
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.AddModelView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.BitmapEditorView">
+            <summary>
+            Interaction logic for BitmapEditorView.xaml
+            </summary>
+            <summary>
+            BitmapEditorView
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.BitmapEditorView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.BlueRegionOfInterestEditorView">
+            <summary>
+            Interaction logic for BlueRegionOfInterestEditorView.xaml
+            </summary>
+            <summary>
+            BlueRegionOfInterestEditorView
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.BlueRegionOfInterestEditorView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.BlueViewControl">
+            <summary>
+            Interaction logic for BlueViewControl.xaml
+            </summary>
+            <summary>
+            BlueViewControl
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.BlueViewControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ChannelFormatSelector">
+            <summary>
+            Interaction logic for ChannelFormatEditor.xaml
+            </summary>
+            <summary>
+            ChannelFormatSelector
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ChannelFormatSelector.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ClassWeightSetView">
+            <summary>
+            Interaction logic for ClassWeightSetView.xaml
+            </summary>
+            <summary>
+            ClassWeightSetView
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ClassWeightSetView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ConfusionMatrix">
+            <summary>
+            Interaction logic for UserControl1.xaml
+            </summary>
+            <summary>
+            ConfusionMatrix
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ConfusionMatrix.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.DatabaseExplorer">
+            <summary>
+            DatabaseExplorer
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.DatabaseExplorer.GetClickedListBoxItem">
+            <summary>
+            Get the last item selected by multiple selection via mouse click.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ViDi2.Training.UI.DatabaseExplorer.ScrollToSelectedView">
+             <summary>
+             Scrolls the list of views until the selected view is one of
+             the visible views.
+            
+             This helps orient the user so they know where they're going if they
+             scroll to the next or previous view.
+            
+             In cases where the selected view is far off screen and its ListBoxItem
+             may not exist because the ListBox is virtualized, this should force that item
+             to exist, allowing focus and navigation to work as expected.
+             </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.DatabaseExplorer.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.DatabaseOverview">
+            <summary>
+            Interaction logic for WPFDatabaseOverview.xaml
+            </summary>
+            <summary>
+            DatabaseOverview
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.DatabaseOverview.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.Dialog">
+            <summary>
+            Dialog
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.Dialog.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.DrawingContext.ShowLabels">
+            <summary>
+            Gets or sets whether to draw labels
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.Extensions.CheckDeploymentTargetCompatibilityUI(ViDi2.Training.IWorkspace,ViDi2.DeploymentTarget)">
+            <summary>
+            Returns true if conversion did take place or no conversion was necessary, returns false if conversion was not possible, return null if user opted out of conversion.
+            </summary>
+            <param name="workspace"></param>
+            <param name="newDeploymentTarget"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ViDi2.Training.UI.ExternalFixtureIndicator">
+            <summary>
+            Interaction logic for ExternalFixtureIndicator.xaml
+            </summary>
+            <summary>
+            ExternalFixtureIndicator
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ExternalFixtureIndicator.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.LayoutModelPropertyEditorView">
+            <summary>
+            Interaction logic for LayoutModelPropertyEditorView.xaml
+            </summary>
+            <summary>
+            LayoutModelPropertyEditorView
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.LayoutModelPropertyEditorView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="F:ViDi2.Training.UI.ViewModels.BitmapEditorViewModel._drawingGroup">
+            <summary>
+            Current set of drawing operations that can be rendered together for the opacity mask,
+            representing the desired bitmap output.  Note every child of this group is ALSO a DrawingGroup
+            so it can be clipped by the Erase operation, then later moved to the history for undo.
+            </summary>
+        </member>
+        <member name="F:ViDi2.Training.UI.ViewModels.BitmapEditorViewModel._history">
+            <summary>
+            Past drawing operations.  Each DrawingCollection is a cohesive set which can be rendered together.
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.ColoredClass">
+            <summary>
+            Defines an association between class name and class color for
+            a class in a tool's database.
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ViewModels.ColoredClass.#ctor(ViDi2.Training.ITool,System.String,System.String)">
+             <summary>
+             Creates a representation of a class in a tool's database.
+             </summary>
+             <remarks>
+             Classes should have unique names within a tool, but their colors
+             do not need to be unique.
+            
+             Changes to <see cref="P:ViDi2.Training.UI.ViewModels.ColoredClass.ClassName"/> or <see cref="P:ViDi2.Training.UI.ViewModels.ColoredClass.Color"/> will be
+             replicated in the tool's database.
+             </remarks>
+             <param name="tool"> The tool in which the class is defined. </param>
+             <param name="className"> The (unique) name of the class. </param>
+             <param name="color"> The color used to consistently represent that class. </param>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.RegionEditorViewModel">
+            <summary>
+            Represents the state of a RegionEditor, allowing one to label regions of one
+            or more classes, each with their own name and color.
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ViewModels.RegionEditorViewModel.#ctor(ViDi2.Training.UI.ViewModels.RedToolViewerViewModel)">
+            <summary>
+            Initializes KnownClasses from the tool's current list of labeled regions.
+            </summary>
+            <remarks>
+            If there are no known classes, a default class is added and selected instead,
+            such that there is always at least one known class, and that there is always a
+            selected class.
+            </remarks>
+            <param name="parent"></param>
+        </member>
+        <member name="M:ViDi2.Training.UI.ViewModels.RegionEditorViewModel.DatabaseOnClassNameChanged(ViDi2.Training.ClassNameChangedEventArgs)">
+            <summary>
+            Listens for new changes in existing classes, updating the name of the
+            corresponding ColoredClass in KnownClasses, so that the RegionEditor can reflect
+            class renaming done elsewhere.
+            </summary>
+            <remarks>
+            Throws an <see cref="T:ViDi2.InvalidOperationException"/> if it detects that one class has
+            been merged into another outside of the RegionEditor. This is because by the time
+            this event is received, the merge has already gone through; we're not yet sure
+            what to do with labels that haven't been applied, whereas our <see cref="P:ViDi2.Training.UI.ViewModels.RegionEditorViewModel.MergeClassesCommand"/>
+            can control what happens before it merges two classes.
+            </remarks>
+            <param name="changes"> The name of the affected class, as well as its new name. </param>
+        </member>
+        <member name="M:ViDi2.Training.UI.ViewModels.RegionEditorViewModel.DatabaseOnClassColorChanged(ViDi2.Training.ClassColorChangedEventArgs)">
+            <summary>
+            Listens for new changes in existing classes, updating the color of the
+            corresponding ColoredClass in KnownClasses so that the RegionEditor can reflect
+            class color changes made elsewhere.
+            </summary>
+            <param name="changes"> The name of the affected class, as well as the color it was changed to. </param>
+        </member>
+        <member name="M:ViDi2.Training.UI.ViewModels.RegionEditorViewModel.ToolStatusOnPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Listens for when the tool starts training or processing, raising
+            PropertyChanged  on the selected class' name. Additionally, CanExecuteChanged
+            is raised for commands that can only execute while the tool is not busy.
+            </summary>
+            <remarks>
+            This causes any controls that edit the select class'
+            name to drop any unsaved changes, so that they don't try to commit those changes
+            while the tool is busy (thus causing a hang).
+            </remarks>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.RegionEditorViewModel.ShouldConfirmCurrentClassName">
+            <summary>
+            Can be set to true to signal that we did something to the
+            selected class name that the user might want to edit.
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.RegionEditorViewModel.KnownClasses">
+            <summary>
+            The collection of classes that the tool already knows about (because they have
+            been used to label at least one region in any view), or that we've created so that
+            the user can start labeling regions of that class.
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.RegionEditorViewModel.SelectedClass">
+            <summary>
+            The class to which new labeled regions will be assigned. Also,
+            the class that will be manipulated when executing commands like <see cref="P:ViDi2.Training.UI.ViewModels.RegionEditorViewModel.RemoveClassCommand"/>.
+            </summary>
+            <remarks>
+            There should always be a class selected.
+            Before the selected class changes to another known class, we will
+            prompt the user to apply unsaved labels, if any.
+            </remarks>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.RegionEditorViewModel.ChangeClassColorCommand">
+            <summary>
+            Changes color of the current class and all of its labeled
+            regions.
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.RegionEditorViewModel.AddNewClassCommand">
+            <summary>
+            Adds a new region class to the region editor and selects it.
+            </summary>
+            <remarks>
+            The class will not be saved to the tool until at least one
+            region is labeled with that class name and that label is
+            saved via Apply.
+            </remarks>
+        </member>
+        <member name="M:ViDi2.Training.UI.ViewModels.RegionEditorViewModel.AddNewClass">
+            <summary>
+            Creates a new class and adds it to <see cref="P:ViDi2.Training.UI.ViewModels.RegionEditorViewModel.KnownClasses"/>.
+            This class has a unique name, and uses the default color.
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.RegionEditorViewModel.EditClassNameCommand">
+            <summary>
+            Enables <see cref="P:ViDi2.Training.UI.ViewModels.RegionEditorViewModel.ShouldConfirmCurrentClassName"/>.
+            </summary>
+            <remarks>
+            The UI can bind (e.g. the focus of a textbox containing the current class name
+            name) to <see cref="P:ViDi2.Training.UI.ViewModels.RegionEditorViewModel.ShouldConfirmCurrentClassName"/>, such that the UI enters "edit mode"
+            when this command executes.
+            </remarks>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.RegionEditorViewModel.MergeClassesCommand">
+            <summary>
+            Merges the current class into another, such that all labeled regions of
+            the current class become instances of the target class, creating a single
+            class.
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ViewModels.RegionEditorViewModel.MergeClasses">
+            <summary>
+            Allows the user to designate a class as the merge target.
+            Then, applies the same name and color as the target class to the current class,
+            relabeling and recoloring all labeled regions of that class. Finally, removes
+            the current class and replaces it with the combined class.
+            </summary>
+            <remarks>
+            If there are unsaved labels for the current class, the user will be prompted to apply those
+            changes. If the changes are not applied, the merge will not proceed.
+            </remarks>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.MaskEditorViewModel.ApplyAll">
+            <summary>
+            AIC-6984 Split from Apply
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ViewModels.BlueViewOverlayViewModel.CreateNodeModel">
+            <summary>
+            Create a new Node Model, with all the currently selected features as nodes,
+            or all features in the view as nodes if there are no selected features.
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.DatabaseExplorerViewModel.ImageDatabaseFileHandler">
+            <summary>
+            The current behavior for adding images from image database files.
+            </summary>
+            <remarks>
+            This behavior applies whenever images are added from files (whether
+            through a dialog or through drag and drop).
+            </remarks>
+        </member>
+        <member name="M:ViDi2.Training.UI.ViewModels.DatabaseExplorerViewModel.AddImagesFromFiles(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Entry point for iteratively adding all images in a list of file/folder names to the database
+            </summary>
+            <param name="fileNames"></param>
+        </member>
+        <member name="M:ViDi2.Training.UI.ViewModels.DatabaseExplorerViewModel.AddImagesAndUpdateProgressControl(ViDi2.UI.IProgressControl,System.Threading.CancellationToken,System.Collections.Generic.List{System.Tuple{System.String,ViDi2.UI.IFileInfo}})">
+            <summary>
+            Method called in a separate thread by <see cref="M:ViDi2.Training.UI.ViewModels.DatabaseExplorerViewModel.AddImagesFromFiles(System.Collections.Generic.IEnumerable{System.String})"/> which iterates over all images found and attempts to add them
+            </summary>
+            <param name="progressControl"></param>
+            <param name="token"></param>
+            <param name="images"></param>
+        </member>
+        <member name="M:ViDi2.Training.UI.ViewModels.DatabaseExplorerViewModel.OpenFileCheckAndAddToDatabase(System.Tuple{System.String,ViDi2.UI.IFileInfo})">
+            <summary>
+            Open the file as a <see cref="T:ViDi2.UI.WpfImage"/> and calls <see cref="M:ViDi2.Training.UI.ViewModels.DatabaseExplorerViewModel.CheckAndAddToDatabase(System.Tuple{System.String,ViDi2.UI.IFileInfo},ViDi2.IImage)"/>
+            </summary>
+            <param name="file"></param>
+            <returns>Returning false breaks out of <see cref="M:ViDi2.Training.UI.ViewModels.DatabaseExplorerViewModel.AddImagesAndUpdateProgressControl(ViDi2.UI.IProgressControl,System.Threading.CancellationToken,System.Collections.Generic.List{System.Tuple{System.String,ViDi2.UI.IFileInfo}})"/></returns>
+        </member>
+        <member name="M:ViDi2.Training.UI.ViewModels.DatabaseExplorerViewModel.AddImageToDatabase(System.Tuple{System.String,ViDi2.UI.IFileInfo},ViDi2.IImage)">
+            <summary>
+            Adds the image to the Database using the supplied info and return the sample name
+            </summary>
+            <param name="imageInfo">Tuple with a base name describing where in the folder the added image was located and a FileInfo</param>
+            <param name="image">Image to be added</param>
+            <returns></returns>
+        </member>
+        <member name="F:ViDi2.Training.UI.ViewModels.DatabaseExplorerViewModel._canAddImages">
+            <summary>
+            Set to false to disable the ability of this control
+            to add images (including drag and drop).
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ViewModels.GreenTagViewModel.UpdateTagString">
+            <summary>
+            Update TagString according to tag control.
+            </summary>
+        </member>
+        <member name="F:ViDi2.Training.UI.ViewModels.GreenTagViewModel._Tags">
+            <summary>
+            Tag List
+            </summary>
+        </member>
+        <member name="F:ViDi2.Training.UI.ViewModels.GreenTagViewModel._EditGreenTagMode">
+            <summary>
+            Tag, RegularExpression Mode
+            </summary>
+        </member>
+        <member name="F:ViDi2.Training.UI.ViewModels.GreenTagViewModel._ModeAddNewTag">
+            <summary>
+            RadioButton TagMode(Add new tag, Select from existing tag)
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.FeatureOverlayViewModel.IsCorrect">
+            <summary>
+            Whether the feature is covered by a feature with the same name
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.FeatureOverlayViewModel.IsCoverConflicted">
+            <summary>
+            Whether the feature is covered by a feature with the same name and they both match a model (or both don't)
+            </summary>
+        </member>
+        <member name="F:ViDi2.Training.UI.ViewModels.NodeSelection._KnownFeatures">
+            <summary>
+            All possible features in this tool
+            </summary>
+        </member>
+        <member name="F:ViDi2.Training.UI.ViewModels.NodeSelection._Targets">
+            <summary>
+            Contains data about whether a feature that exists in this tool will match the selected node(s)
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.RocGraphViewModel.LowerThresholdPoint">
+            <summary>
+            Red and green points for the roc graphs.
+            X is the true positive, Y False positive rates
+            Lower for T1, Upper for T2
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ViewModels.RedGraphViewModel.ClassesColors">
+            <summary>
+            Stores all scores for all classes
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ViewModels.ToolParametersHighDetailGreenViewModel.ExecuteResizeDoc">
+            <summary>
+            It will be changed to resize document path
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ViewModels.ToolParametersQuickHighDetailGreenViewModel.ExecuteResizeDoc">
+            <summary>
+            It will be changed to resize document path
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ViewModels.ViewerFeatureIconViewModel.ChangeIconSizeByFeatureSize">
+            <summary>
+            ToolType: Red
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ViewModels.ViewerFeatureIconViewModel.ChangeIconSizeByPatchSize">
+            <summary>
+            ToolType: RedHighDetail
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.WorkspaceBrowserViewModel">
+            <summary>
+            Class which represents the business logic behind the workspace browser
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.WorkspaceBrowserViewModel.DefaultServerAddress">
+            <summary>
+            Runtime server address shown when prompting the Export to service dialog box
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.WorkspaceBrowserViewModel.IsRemoteLicensed">
+            <summary>
+            property that control if there is a remote license is available
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.WorkspaceBrowserViewModel.ExportToService">
+            <summary>
+            method called when exporting a training workspace to a service
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.WorkspaceItemViewModel">
+            <summary>
+            Class which represents a reusable workspace view model child of a <see cref="T:ViDi2.Training.UI.IWorkspaceBrowserViewModel"/>
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.LayoutModelVisualEditorView">
+            <summary>
+            Interaction logic for LayoutModelVisualEditorView.xaml
+            </summary>
+            <summary>
+            LayoutModelVisualEditorView
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.LayoutModelVisualEditorView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.LossGraphWindow">
+            <summary>
+            Interaction logic for LossGraphWindow.xaml
+            </summary>
+            <summary>
+            LossGraphWindow
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.LossGraphWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ManualRegionOfInterestEditorView">
+            <summary>
+            Interaction logic for ManualRegionOfInterestEditorView.xaml
+            </summary>
+            <summary>
+            ManualRegionOfInterestEditorView
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ManualRegionOfInterestEditorView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.MarkingOverlayExtensions">
+            <summary>
+            Extension methods to render the marking using WPF 
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.MarkingOverlayExtensions.SetupOverlayEnvironment(System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Initialize the WPF application, resources, and services that are required for creating overlay graphics in a non-WPF application.
+            If this is called from a WPF application, it only initializes resources and services.
+            Make sure to call <see cref="M:ViDi2.Training.UI.MarkingOverlayExtensions.TeardownOverlayEnvironment"/> if you are not in a WPF app. 
+            </summary>
+            <param name="timeout">Maximum time in ms to wait for WPF application to initialize.</param>
+            <param name="forceServiceLocatorSetup">Whether to re-initialize the <see cref="T:ViDi2.Common.Utilities.ServiceLocator"/> instance if one already exists</param>
+            <param name="forceResourceSetup">Whether to add the WPF resources needed if they appear to already exist in the App Resources</param>
+        </member>
+        <member name="M:ViDi2.Training.UI.MarkingOverlayExtensions.TeardownOverlayEnvironment">
+            <summary>
+            Shut down current WPF application. Call this if you are not in a WPF app (because <see cref="M:ViDi2.Training.UI.MarkingOverlayExtensions.SetupOverlayEnvironment(System.Int32,System.Boolean,System.Boolean)"/> created one for you). 
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.MarkingOverlayExtensions.OverlayImage(ViDi2.ISample,ViDi2.Training.UI.IDrawingContext,System.Func{ViDi2.IView,System.Int32,System.Boolean},ViDi2.ImageFormat,System.Double,System.Boolean)">
+            <summary>
+            Create an image of the graphical overlay for a processed sample.
+            Make sure to call <see cref="M:ViDi2.Training.UI.MarkingOverlayExtensions.SetupOverlayEnvironment(System.Int32,System.Boolean,System.Boolean)"/> before calling this, even if you are in a WPF app. 
+            </summary>
+            <param name="sample">Sample to generate graphics for.</param>
+            <param name="context">Information about what graphics to draw.</param>
+            <param name="predicate">Function that selects which views to draw. Null draws all.</param>
+            <param name="format">PNG and JPEG are supported.</param>
+            <param name="zoom">How much to expand the image.</param>
+            <param name="includeImage">Whether to save the image.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ViDi2.Training.UI.MarkingOverlayExtensions.OverlayImage(ViDi2.IMarking,ViDi2.Training.UI.IDrawingContext,System.Func{ViDi2.IView,System.Int32,System.Boolean},ViDi2.ImageFormat,System.Double,System.Boolean)">
+            <summary>
+            Create an image of the graphical overlay for a marking.
+            Make sure to call <see cref="M:ViDi2.Training.UI.MarkingOverlayExtensions.SetupOverlayEnvironment(System.Int32,System.Boolean,System.Boolean)"/> before calling this, even if you are in a WPF app. 
+            </summary>
+            <param name="marking">Marking to generate graphics for.</param>
+            <param name="context">Information about what graphics to draw.</param>
+            <param name="predicate">Function that selects which views to draw. Null draws all.</param>
+            <param name="format">PNG and JPEG are supported.</param>
+            <param name="zoom">How much to expand the image.</param>
+            <param name="includeImage">Whether to save the image.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ViDi2.Training.UI.MarkingOverlayExtensions.OverlayImage(ViDi2.IView,ViDi2.Training.UI.IDrawingContext,ViDi2.ImageFormat,System.Double,System.Boolean)">
+            <summary>
+            Create an image of the graphical overlay for a view.
+            Make sure to call <see cref="M:ViDi2.Training.UI.MarkingOverlayExtensions.SetupOverlayEnvironment(System.Int32,System.Boolean,System.Boolean)"/> before calling this, even if you are in a WPF app. 
+            </summary>
+            <param name="view">View to generate graphics for.</param>
+            <param name="context">Information about what graphics to draw.</param>
+            <param name="format">PNG and JPEG are supported.</param>
+            <param name="zoom">How much to expand the image.</param>
+            <param name="includeImage">Whether to save the image.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ViDi2.Training.UI.ModelEditorView">
+            <summary>
+            Interaction logic for ModelEditorView.xaml
+            </summary>
+            <summary>
+            ModelEditorView
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ModelEditorView.ReturnToParentWindow(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Brings the Model Editor's parent window to the foreground before the Model Editor closes.
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ModelEditorView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ModelPropertyEditorView">
+            <summary>
+            Interaction logic for ModelPropertyEditorView.xaml
+            </summary>
+            <summary>
+            ModelPropertyEditorView
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ModelPropertyEditorView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ModelVisualEditorView">
+            <summary>
+            Interaction logic for ModelVisualEditorView.xaml
+            </summary>
+            <summary>
+            ModelVisualEditorView
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ModelVisualEditorView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.NewToolSelect">
+            <summary>
+            Interaction logic for WPFNewToolSelect.xaml
+            </summary>
+            <summary>
+            NewToolSelect
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.NewToolSelect.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.NodeModelVisualEditorView">
+            <summary>
+            Interaction logic for NodeModelVisualEditorView.xaml
+            </summary>
+            <summary>
+            NodeModelVisualEditorView
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.NodeModelVisualEditorView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.NodeSelectionPropertyView">
+            <summary>
+            Interaction logic for NodeSelectionPropertyView.xaml
+            </summary>
+            <summary>
+            NodeSelectionPropertyView
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.NodeSelectionPropertyView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.Properties.Resources.Refresh">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.Properties.Resources.Setting">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.RedRegionOfInterestEditorView">
+            <summary>
+            Interaction logic for RedRegionOfInterestEditorView.xaml
+            </summary>
+            <summary>
+            RedRegionOfInterestEditorView
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.RedRegionOfInterestEditorView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.RedScoreGraph">
+            <summary>
+            Interaction logic for RedScoreGraph.xaml
+            </summary>
+            <summary>
+            RedScoreGraph
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.RedScoreGraph.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.RedViewControl">
+            <summary>
+            Interaction logic for RedViewControl.xaml
+            </summary>
+            <summary>
+            RedViewControl
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.RedViewControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.RegexModelPropertyEditorView">
+            <summary>
+            Interaction logic for RegexModelPropertyEditorView.xaml
+            </summary>
+            <summary>
+            RegexModelPropertyEditorView
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.RegexModelPropertyEditorView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.RegexModelVisualEditorView">
+            <summary>
+            Interaction logic for RegexModelVisualEditorView.xaml
+            </summary>
+            <summary>
+            RegexModelVisualEditorView
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.RegexModelVisualEditorView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.RegionSelectionPropertyView">
+            <summary>
+            Interaction logic for RegionSelectionPropertyView.xaml
+            </summary>
+            <summary>
+            RegionSelectionPropertyView
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.RegionSelectionPropertyView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.RocGraph">
+            <summary>
+            Interaction logic for RedRocGraph.xaml
+            </summary>
+            <summary>
+            RocGraph
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.RocGraph.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.RoiPreviewControl">
+            <summary>
+            Interaction logic for RoiPreviewControl.xaml
+            </summary>
+            <summary>
+            RoiPreviewControl
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.RoiPreviewControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.SearchSpacePropertyView">
+            <summary>
+            Interaction logic for SearchSpacePropertyView.xaml
+            </summary>
+            <summary>
+            SearchSpacePropertyView
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.SearchSpacePropertyView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.SelectTrainingSetView">
+            <summary>
+            Interaction logic for SelectTrainingSetView.xaml
+            </summary>
+            <summary>
+            SelectTrainingSetView
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.SelectTrainingSetView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.SelectUIThemeDialog">
+            <summary>
+            SelectUIThemeDialog.xaml
+            </summary>
+            <summary>
+            SelectUIThemeDialog
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.SelectUIThemeDialog.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.StringModelPropertyEditorView">
+            <summary>
+            Interaction logic for StringModelPropertyEditorView.xaml
+            </summary>
+            <summary>
+            StringModelPropertyEditorView
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.StringModelPropertyEditorView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.XmlExclusionValidationRule">
+            <summary>
+            Validation Rule used to ensure that there are no XML characters in a string
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ToolChain">
+            <summary>
+            Interaction logic for ToolChain control
+            </summary>
+            <summary>
+            ToolChain
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ToolChain.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ToolParameters">
+            <summary>
+            Interaction logic for WPFParameters.xaml
+            </summary>
+            <summary>
+            ToolParameters
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ToolParameters.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ToolPill">
+            <summary>
+            ToolPill
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ToolPill.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.UniqueRegionClassNameValidationRule">
+            <summary>
+            Defines a ValidationRule that ensures that a proposed name change for a class used
+            to label regions in the RegionEditor is valid. This rule also ensures that the proposed class
+            name isn't already used by any of the other existing regions being edited in the RegionEditor.
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.UniqueRegionClassNameValidationRule.RegionEditorViewModelContainer">
+            <summary>
+            A DependencyObject with a DependencyProperty that holds a RegionEditorViewModel.
+            This allows you to bind a viewmodel to this validation rule, which is otherwise not possible.
+            </summary>
+            <remarks>
+            Note that this validation rule does not get executed whenever PropertyChanged is raised
+            on this bound value; the rule only executes when trying to update the property the rule
+            is actually in charge of validating (such as the contents of a textbox).
+            </remarks>
+        </member>
+        <member name="M:ViDi2.Training.UI.UniqueRegionClassNameValidationRule.IsNewClassNameValidAndUnique(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+             <summary>
+             Returns true if the proposed class (re)name is "valid," and if
+             a class by that name does not already exist.
+            
+             A class name is considered valid if:
+             1. It isn't empty or all whitespace.
+             2. The given collection of existing class names doesn't contain a different class with
+                the proposed class name (with or without leading/trailing whitespace). Proposing the
+                same exact name for the current class is considered valid.
+             3. The current class name and the proposed class name differ by more than just whitespace.
+             </summary>
+             <param name="currentClassName"> The name of the current class. </param>
+             <param name="proposedClassName"> The new name being proposed for the current class. </param>
+             <param name="existingClassNames"> The collection of existing classes to compare against for uniqueness. </param>
+             <returns></returns>
+        </member>
+        <member name="M:ViDi2.Training.UI.UniqueRegionClassNameValidationRule.Validate(System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Validates the given proposed class name. The name is validated against
+            the ViewModel's current and known classes.
+            </summary>
+            <param name="value"> The proposed class name (as a string). </param>
+            <param name="cultureInfo"> Ignored </param>
+            <returns> A ValidResult if the proposed name is valid and unique. </returns>
+        </member>
+        <member name="T:ViDi2.Training.UI.RegionEditorViewModelContainer">
+            <summary>
+            Supports creating a validation rule with binding support (since you can't directly bind
+            to properties on a ValidationRule).
+            
+            See <see cref="!:https://social.technet.microsoft.com/wiki/contents/articles/31422.wpf-passing-a-data-bound-value-to-a-validation-rule.aspx"/> for
+            the basic idea.
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.Viewer">
+            <summary>
+            Interaction logic for WPFViewer.xaml
+            </summary>
+            <summary>
+            Viewer
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.Viewer.DisplayChannelFormat">
+            <inheritdoc/>
+        </member>
+        <member name="M:ViDi2.Training.UI.Viewer.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewerFeatureIcon">
+            <summary>
+            Interaction logic for UserControl1.xaml
+            </summary>
+            <summary>
+            ViewerFeatureIcon
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ViewerFeatureIcon.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.WorkspaceBrowser">
+            <summary>
+            Interaction logic for WPFWorkspaceBrowser.xaml
+            </summary>
+            <summary>
+            WorkspaceBrowser
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.WorkspaceBrowser.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.MarkingStyle">
+            <summary>
+            MarkingStyle
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.MarkingStyle.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>

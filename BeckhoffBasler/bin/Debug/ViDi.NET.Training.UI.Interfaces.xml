@@ -1,0 +1,1168 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ViDi.NET.Training.UI.Interfaces</name>
+    </assembly>
+    <members>
+        <member name="T:ViDi2.Training.UI.DrawingToolType">
+            <summary>
+            Enumeration of what types of drawing can be performed
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.SelectedViewChangedHandler">
+            <summary>
+            Handler called when the selected view changed
+            </summary>
+            <param name="viewKey">the view-key of the newly selected view</param>
+        </member>
+        <member name="T:ViDi2.Training.UI.CdbFileHandler">
+            <summary>
+            A delegate that can load images from the given image
+            database file into the given database.
+            </summary>
+            <param name="cdbFileInfo"> The image database file (such as a .cdb file) to load images from. </param>
+            <param name="currentDatabase"> The database to load the images into. </param>
+        </member>
+        <member name="T:ViDi2.Training.UI.IDatabaseExplorerView">
+            <summary>
+            Represents the user control which binds to the <see cref="T:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel"/>
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IDatabaseExplorerView.ViewModel">
+            <summary>
+            Gets or sets the ViewModel and the DataContext for the view
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.IDatabaseExplorerView.ShowMessageBox(System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage)">
+            <summary>
+            Show a message box to the user
+            </summary>
+            <param name="messageBoxText"></param>
+            <param name="caption"></param>
+            <param name="button"></param>
+            <param name="icon"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViDi2.Training.UI.IDatabaseExplorerView.ScrollToSelectedView">
+             <summary>
+             Makes the selected view visible in the DatabaseExplorer's
+             collection of views.
+            
+             Useful after adding/removing/sorting views as it shows the
+             user which view they will select if they navigate to the
+             previous or next view.
+             </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.IDrawingContext">
+            <summary>
+            Training time specialization of the IDrawingContext which has training specific information
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IDrawingContext.ShowLabels">
+            <summary>
+            Gets or sets whether to draw labels
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.IMainWindow">
+            <summary>
+            Represents the interface for the main window
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IMainWindow.WorkspaceBrowserViewModel">
+            <summary>
+            Gets a reference to the workspace browser
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IMainWindow.ToolChainViewModel">
+            <summary>
+            Gets a reference to the tool-chain
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IMainWindow.ViewerViewModel">
+            <summary>
+            Gets a reference to the viewer
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IMainWindow.DatabaseExplorerViewModel">
+            <summary>
+            Gets a reference to the database explorer
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IMainWindow.DatabaseOverviewViewModel">
+            <summary>
+            Gets a reference to the database overview
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IMainWindow.SampleViewerViewModel">
+            <summary>
+            Gets a reference to the sample viewer
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IMainWindow.IsFullScreen">
+            <summary>
+            Gets or sets whether the window is shown fullscreen
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IMainWindow.IsProductionMode">
+            <summary>
+            Gets or sets whether to display production mode
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IMainWindow.MainMenu">
+            <summary>
+            Gets a reference to the main menu bar
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IMainWindow.StatusBar">
+            <summary>
+            Gets a reference the status bar
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IMainWindow.LossGraphWindow">
+            <summary>
+            Gets a reference to LossGraph Window
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.IPluginContext">
+            <summary>
+            Represents the context within which plugins are exectued
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IPluginContext.Plugins">
+            <summary>
+            Gets the list of loaded plugins to allow cross-plugin interaction
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IPluginContext.MainWindow">
+            <summary>
+            Gets a reference to the main window
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.IPlugin">
+            <summary>
+            Represents the common interface to UI plugins
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IPlugin.Name">
+            <summary>
+            Gets the name of the plugin
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IPlugin.Description">
+            <summary>
+            Gets the plugin description
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IPlugin.Version">
+            <summary>
+            Gets the plugin version
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.IPlugin.Initialize(ViDi2.Training.UI.IPluginContext)">
+            <summary>
+            Initializes the plugin
+            </summary>
+            <param name="context">the context</param>
+        </member>
+        <member name="M:ViDi2.Training.UI.IPlugin.DeInitialize">
+            <summary>
+            DeInitializes the plugin
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.IToolChainView">
+            <summary>
+            The interface which represents the user control that binds to the <see cref="T:ViDi2.Training.UI.ViewModels.IToolChainViewModel"/>
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IToolChainView.ViewModel">
+            <summary>
+            Gets or sets the view model and the DataContext for this user control
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.IToolChainView.FocusStreamTextBox">
+            <summary>
+            Method to force the keyboard focus to the stream rename TextBox
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IViewerView.ViewModel">
+            <summary>
+            Reference to the view model which serves as the DataContext for this user control
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.IViewerView.ShowMessageBox(System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage)">
+            <summary>
+            Method to show a message box to the user
+            </summary>
+            <param name="messageBoxText"></param>
+            <param name="caption"></param>
+            <param name="button"></param>
+            <param name="icon"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViDi2.Training.UI.IViewerView.ResetZoom">
+            <summary>
+            Resets the zoom and pan to show the current view
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IViewerView.DisplaySize">
+            <summary>
+            Size of the display used by the view model for setting up scaling
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.IWorkspaceBrowser">
+            <summary>
+            Represents a component to select and manage workspaces
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IWorkspaceBrowser.ViewModel">
+            <summary>
+            Reference to the view model which represents the business logic behind the workspace browser
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IWorkspaceBrowser.Control">
+            <summary>
+            Gets or sets the underlying control instance
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IWorkspaceBrowser.CurrentWorkspace">
+            <summary>
+            Gets or sets the currently selected workspace
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IWorkspaceBrowser.StatusItemContainer">
+            <summary>
+            Gets or sets the container to place status items
+            </summary>
+            <remarks>this is typically the item collection of a <see cref="T:System.Windows.Controls.Primitives.StatusBar"/></remarks>
+        </member>
+        <member name="M:ViDi2.Training.UI.IWorkspaceBrowser.AutoSizeColumns">
+            <summary>
+            Resize the columns in the space which holds the list of workspace name/size/state etc.
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.IWorkspaceBrowser.ShowMessageBox(System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage)">
+            <summary>
+            Shows a message box tethered to the window which holds the implementation of the <see cref="T:ViDi2.Training.UI.IWorkspaceBrowser"/>
+            </summary>
+            <param name="messageBoxText"></param>
+            <param name="caption"></param>
+            <param name="button"></param>
+            <param name="icon"></param>
+            <returns></returns>
+        </member>
+        <member name="E:ViDi2.Training.UI.IWorkspaceBrowser.WorkspaceSelected">
+            <summary>
+            Occurs when a workspace was selected
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.WorkspaceSelectedHandler">
+            <summary>
+            Handler called when a workspace was selected
+            </summary>
+            <param name="workspace">the selected workspace</param>
+        </member>
+        <member name="M:ViDi2.Training.UI.IModelEditorService.Show(ViDi2.Training.IBlueTool)">
+            <summary>
+            Checks whether a IModelEditorViewModel for the tool is not already open using IOpenModelEditorsService.
+            If yes, bring that window to the front.
+            If no, create new ToolModelsEditorView using IoC and set the DataContext.
+            </summary>
+            <param name="tool"></param>
+        </member>
+        <member name="P:ViDi2.Training.UI.IModelEditorService.OpenModelEditors">
+            <summary>
+            Collection containing references to all active model editor windows.
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.IAvailableToolViewModel">
+            <summary>
+            Describes a type of tool which is available to be added in some context.
+            Represents the view model for the tool options of the new tool select user control.
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IAvailableToolViewModel.ToolType">
+            <summary>
+            The type of the tool
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IAvailableToolViewModel.AddToolCommand">
+            <summary>
+            Command to add a tool of this type
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.IBitmapEditorViewModel">
+            <summary>
+            Base interface for view model which contain the business logic for bitmap drawing operations
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IBitmapEditorViewModel.Cursor">
+            <summary>
+            The current cursor type
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IBitmapEditorViewModel.Pen">
+            <summary>
+            The current outline shape
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IBitmapEditorViewModel.Color">
+            <summary>
+            The current color
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IBitmapEditorViewModel.ToolType">
+            <summary>
+            Enumeration representing which <see cref="T:ViDi2.Training.UI.DrawingToolType"/> is selected
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.IChannelFormatSelectorViewModel">
+            <summary>
+            Interface which represents a reusable view model which contains a property representing a channel format
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IChannelFormatSelectorViewModel.Format">
+            <summary>
+            The channel format represents by the object
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.IColoredClass">
+            <summary>
+            View model interface which represents a pairing between a class name and a color
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IColoredClass.ClassName">
+            <summary>
+            The name of the class
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IColoredClass.Color">
+            <summary>
+            The color of the class
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel">
+            <summary>
+            View model which serves as the DataContext for the <see cref="T:ViDi2.Training.UI.IDatabaseExplorerView"/>
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.Database">
+            <summary>
+            The underlying database for the view model
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.UIView">
+            <summary>
+            Gets or sets the user control assigned to this view model
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.ItemWidth">
+            <summary>
+            Gets or sets the width of the database explorer
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.Filter">
+            <summary>
+            Gets or sets the view filter currently being used by this database explorer
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.SelectedView">
+            <summary>
+            Gets or sets the currently selected view
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.SelectedKeys">
+            <summary>
+            Gets or sets the currently selected view's Keys
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.SelectedViewsCount">
+            <summary>
+            Gets or sets the currently selected view's Count
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.Orientation">
+            <summary>
+            Gets or sets the orientation of the control
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.ImageFileFilters">
+            <summary>
+            Gets or sets the allowed extensions for image files in the database
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.AddImages">
+            <summary>
+            Command to add a set of images to the database
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.AddImagesRecursive">
+            <summary>
+            Command to add images and images in subfolders to database
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.RenameSamples">
+            <summary>
+            Rename a set of images
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.RemoveSamples">
+            <summary>
+            Remove a set of images
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.Refresh">
+            <summary>
+            Refresh the database
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.EditSampleMode">
+            <summary>
+            Edit the sample mode for the stream
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.AddSamplesToSet">
+            <summary>
+            Add images to an image set
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.RemoveSamplesFromSet">
+            <summary>
+            Remove images from an image set
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.UpDownKeyCommand">
+            <summary>
+            Command to select the previous/next view in the database
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.NextView">
+            <summary>
+            Command to select the next view in the database
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.PreviousView">
+            <summary>
+            Command to select the previous view in the database
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.ClearViews">
+            <summary>
+            Clear markings and/or labels from views
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.AcceptViews">
+            <summary>
+            Convert markings to labels in views
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.SetViewTrainFlags">
+            <summary>
+            Set the whether views are used for training
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.SetViewGroup">
+            <summary>
+            Set the group of views
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.SelectTrainingSet">
+            <summary>
+            Select the views used for training
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.LabelViews">
+            <summary>
+            Apply a labels to views
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.ToggleOverlay">
+            <summary>
+            Command to toggle the overlay just for the database explorer
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.SetViewTrainFlagsForMultiSelection">
+            <summary>
+            Set the whether views are used for training in MultiSelection
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.RemoveSamplesForMultiSelection">
+            <summary>
+            Remove a set of images For MultiSelection
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IDatabaseExplorerViewModel.Selected">
+            <summary>
+            keep focus image of Change Tool
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.IEditorViewModel">
+            <summary>
+            View model for the region/mask/other editor in the viewer
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IEditorViewModel.ViewKey">
+            <summary>
+            Gets or sets the view key for the editor
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IEditorViewModel.Close">
+            <summary>
+            Command to close the editor
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IEditorViewModel.Apply">
+            <summary>
+            Command to apply the changes made in the editor
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.INewToolSelectViewModel">
+            <summary>
+            View model which serves as the DataContext for the new tool select user control
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.INewToolSelectViewModel.SelectedTool">
+            <summary>
+            The tool which the new tool which will added to, null if tool is to be added to the stream
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.INewToolSelectViewModel.IsVisible">
+            <summary>
+            Gets or sets whether the new tool select user control is visible
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.INewToolSelectViewModel.AvailableTools">
+            <summary>
+            Represents the tool types which are available and the view model which provides a command to add them. 
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.IRegionEditorViewModel">
+            <summary>
+            View model interface which represents region editor data
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IRegionEditorViewModel.SelectedClass">
+            <summary>
+            The class to which new labeled regions will be assigned. Also,
+            the class that will be manipulated when executing commands like <see cref="!:RemoveClassCommand"/>.
+            </summary>
+            <remarks>
+            There should always be a class selected. 
+            Before the selected class changes to another known class, we will 
+            prompt the user to apply unsaved labels, if any.
+            </remarks>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.IToolChainPillViewModelBase">
+            <summary>
+            Common interface for all stream and tool pills in an <see cref="T:ViDi2.Training.UI.ViewModels.IToolChainViewModel"/>
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainPillViewModelBase.Parent">
+            <summary>
+            Reference to the <see cref="T:ViDi2.Training.UI.ViewModels.IToolChainViewModel"/> which contains this tool pill
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainPillViewModelBase.IsToolChainEditable">
+            <summary>
+            Gets whether the parent <see cref="T:ViDi2.Training.UI.ViewModels.IToolChainViewModel"/> allows tool chain edits
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainPillViewModelBase.IsStreamEditable">
+            <summary>
+            Gets whether the parent <see cref="T:ViDi2.Training.UI.ViewModels.IToolChainViewModel"/> allows stream edits
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainPillViewModelBase.IsPassive">
+            <summary>
+            Gets whether the parent <see cref="T:ViDi2.Training.UI.ViewModels.IToolChainViewModel"/> is in <see cref="F:ViDi2.UI.ToolChainMode.Production"/> mode
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainPillViewModelBase.Mode">
+            <summary>
+            Gets the <see cref="T:ViDi2.UI.ToolChainMode"/> of the parent <see cref="T:ViDi2.Training.UI.ViewModels.IToolChainViewModel"/>
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainPillViewModelBase.AddToolCommand">
+            <summary>
+            Command which represents the action of adding a downstream tool to the pill
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainPillViewModelBase.IsChecked">
+            <summary>
+            Gets whether the object is checked
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ViewModels.IToolChainPillViewModelBase.SetIsChecked">
+            <summary>
+            Method to refresh the checked state of the checkable object
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainPillViewModelBase.ExternalFixtureReference">
+            <summary>
+            Identifies where the tool's external fixture is coming from if one is in use
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.IToolChainStreamPillViewModel">
+            <summary>
+            The view model for the tool chain pill that contains the database for a stream.
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainStreamPillViewModel.AvailableExternalFixtureType">
+            <summary>
+            Indicates the type of external fixture available to the stream.
+            Null if no external fixture is available.
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainStreamPillViewModel.ExternalFixtureWarningTooltip">
+            <summary>
+            Tooltip to be displayed over the external fixture icon when IsDirty is true
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainStreamPillViewModel.IsDirty">
+            <summary>
+            Indicates whether a change has been made which renders the current set of views in externally fixtured tools
+            out of date, and the UpdateFixturesCommand needs to be executed.
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainStreamPillViewModel.UpdateFixturesCommand">
+            <summary>
+            Command which processes all views in all tools in the stream which use an external fixture
+            so that their input pose/size are in reference to some external pattern.
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.IToolChainToolPillViewModel">
+            <summary>
+            The view model for the tool chain pill that contains a tool. Describes a <see cref="T:ViDi2.Training.UI.ViewModels.IToolPillViewModelBase"/> which is in an <see cref="T:ViDi2.Training.UI.ViewModels.IToolChainViewModel"/>
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainToolPillViewModel.RemoveToolCommand">
+            <summary>
+            Command to remove the tool from the tool chain
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainToolPillViewModel.CloneToolCommand">
+            <summary>
+            Command to clone the tool
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainToolPillViewModel.RenameToolCommand">
+            <summary>
+            Command to rename the tool
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainToolPillViewModel.ExternalFixtureToolTip">
+            <summary>
+            Specifies a tool tip to display when mousing over the external size icon
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.IToolChainViewModel">
+            <summary>
+            Represents a toolchain control
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainViewModel.View">
+            <summary>
+            The ToolChain user control that binds to this view model
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainViewModel.Stream">
+            <summary>
+            Gets or sets the current stream
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainViewModel.Tool">
+            <summary>
+            Gets or sets the current tool
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainViewModel.Workspace">
+            <summary>
+            Gets or sets the current workspace
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainViewModel.Mode">
+            <summary>
+            Gets or sets the mode of the tool chain
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainViewModel.IsToolChainEditable">
+            <summary>
+            Gets or sets whether edits to the tool chain can be made such as resetting or importing a tool
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainViewModel.IsStreamEditable">
+            <summary>
+            Gets or sets whether edits to the stream can be made such as adding, removing, cloning, or renaming streams
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainViewModel.IsPassive">
+            <summary>
+            Gets whether <see cref="P:ViDi2.Training.UI.ViewModels.IToolChainViewModel.Mode"/> is set to <see cref="F:ViDi2.UI.ToolChainMode.Production"/>
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainViewModel.StreamPillViewModel">
+            <summary>
+            Gets the view model which wraps the current stream
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainViewModel.ToolPillViewModels">
+            <summary>
+            Gets a nested <see cref="T:System.Collections.Generic.IEnumerable`1"/> which represents all tools in the current stream
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainViewModel.SelectedToolPillViewModel">
+            <summary>
+            Gets the view model which wraps the current tool
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainViewModel.NewToolSelectViewModel">
+            <summary>
+            Gets the view model which is the DataContext for the new tool select user control
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainViewModel.AddStreamCommand">
+            <summary>
+            Add a stream to the workspace
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainViewModel.RemoveStreamCommand">
+            <summary>
+            Remove the current stream from the workspace
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainViewModel.CloneStreamCommand">
+            <summary>
+            Remove the current stream from the workspace
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolChainViewModel.EditDeploymentTargetCommand">
+            <summary>
+            Change what platforms the workspace is compatible with
+            </summary>
+        </member>
+        <member name="M:ViDi2.Training.UI.ViewModels.IToolChainViewModel.GetToolPillViewModel(System.Func{ViDi2.Training.UI.ViewModels.IToolChainToolPillViewModel,System.Boolean})">
+            <summary>
+            Get the element of the tree that matches the given condition
+            </summary>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="E:ViDi2.Training.UI.ViewModels.IToolChainViewModel.StreamSelected">
+            <summary>
+            Occurs when a stream is selected
+            </summary>
+        </member>
+        <member name="E:ViDi2.Training.UI.ViewModels.IToolChainViewModel.ToolSelected">
+            <summary>
+            Occurs when a tool is selected
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.StreamSelectedHandler">
+            <summary>
+            Handler called when the currently selected steam changed
+            </summary>
+            <param name="stream"></param>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.ToolSelectedHandler">
+            <summary>
+            Handler called when the currently selected tool changed
+            </summary>
+            <param name="tool"></param>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.IToolPillViewModelBase">
+            <summary>
+            Describes an object which is a view model for a tool pill and has the core functionality 
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolPillViewModelBase.Tool">
+            <summary>
+            A reference to the tool which this view model wraps
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolPillViewModelBase.TrainToolCommand">
+            <summary>
+            Command to check conditions for and initiate training
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolPillViewModelBase.AbortToolCommand">
+            <summary>
+            Command to abort the current tool task
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolPillViewModelBase.ProcessToolCommand">
+            <summary>
+            Command to process the tool
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolPillViewModelBase.UpdateParametersToolCommand">
+            <summary>
+            Command to update the tool's parameters
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolPillViewModelBase.EditModelsToolCommand">
+            <summary>
+            Command to show the model editing interface
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolPillViewModelBase.ResetToolCommand">
+            <summary>
+            Command to reset the tool
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolPillViewModelBase.LossOfToolCommand">
+            <summary>
+            Command to See Loss graph of tool
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolPillViewModelBase.ImportToolCommand">
+            <summary>
+            Command to import a tool template into the tool pill
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolPillViewModelBase.ExportToolCommand">
+            <summary>
+            Command to export the tool template of the tool pill
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.IToolViewerViewModel">
+            <summary>
+            View model wrapping a view of a tool
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.EditorViewModel">
+            <summary>
+            View model which serves as the DataContext for the mask/region/other editor
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.ViewerFeatureIconViewModel">
+            <summary>
+            View model which serves as the DataContext for the draggable/resizable feature icon in the tool viewer
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.ViewOverlayViewModel">
+            <summary>
+            Gets or sets the view model for the view overlay which contains the labels and markings
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.Database">
+            <summary>
+            Gets the <see cref="T:ViDi2.Training.IToolDatabase"/> for the view model
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.AcceptView">
+            <summary>
+            Command to accept the view wrapped by the view model (convert markings into labels)
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.ApplyMaskToTool">
+            <summary>
+            Command to apply the mask created by the <see cref="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.EditorViewModel"/> to the view
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.ClearMarking">
+            <summary>
+            Command to clear the marking and not the labels from the view
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.ClearMarkingAndLabels">
+            <summary>
+            Command to clear markings and labels from the view
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.EditMask">
+            <summary>
+            Command to enter mask editing mode by initializing the <see cref="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.EditorViewModel"/> 
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.EditROI">
+            <summary>
+            Command to enter ROI editing mode by initializing the <see cref="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.EditorViewModel"/> 
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.ExportView">
+            <summary>
+            Prompt the user for options and export an image of the view
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.Process">
+            <summary>
+            Command to process this view
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.ToggleTrainFlag">
+            <summary>
+            Command to toggle whether the view wrapped by the view model is used for training
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.ToggleLabels">
+            <summary>
+            Command to toggle whether labels should be shown
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.ToggleMarkings">
+            <summary>
+            Command to toggle whether markings should be shown
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.ToggleOverlay">
+            <summary>
+            Command to toggle whether any marking/label graphics should be shown
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.ShowLabels">
+            <summary>
+            Gets or sets whether to show labels
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.ShowMarkings">
+            <summary>
+            Gets or sets whether to show markings
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.ShowOverlay">
+            <summary>
+            Gets or sets whether to show any markings/labels
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.ImageLoadFailed">
+            <summary>
+            Gets the current error message associated with failure to load the image
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.Tool">
+            <summary>
+            Gets the tool for the view
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.View">
+            <summary>
+            Gets the <see cref="T:ViDi2.IView"/> this view models wraps
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.ViewClipGeometry">
+            <summary>
+            Gets the geometry that describes the region outside of the view in the image
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.ViewImage">
+            <summary>
+            Gets the image of just the view in the sample
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IToolViewerViewModel.ViewImagePreview">
+            <summary>
+            Gets the low resolution preview version of the view image
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.IViewerFeatureIconViewModel">
+            <summary>
+            View model which serves as the DataContext for the draggable/resizable feature icon in the tool viewer
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IViewerFeatureIconViewModel.ViewerViewModel">
+            <summary>
+            Parent <see cref="T:ViDi2.Training.UI.ViewModels.IToolViewerViewModel"/> which owns this view model
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IViewerFeatureIconViewModel.Position">
+            <summary>
+            Gets or sets whether the icon is placed
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IViewerFeatureIconViewModel.Size">
+            <summary>
+            Gets or sets the size of the icon
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IViewerFeatureIconViewModel.KeepAspectRatio">
+            <summary>
+            Gets whether the icon needs to keep its aspect ratio when scaling
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.EditingMode">
+            <summary>
+            Represents the different editing modes for the viewer
+            </summary>
+        </member>
+        <member name="F:ViDi2.Training.UI.ViewModels.EditingMode.None">
+            <summary>
+            No editing, just viewing
+            </summary>
+        </member>
+        <member name="F:ViDi2.Training.UI.ViewModels.EditingMode.RegionOfInterest">
+            <summary>
+            Edit the view's ROI
+            </summary>
+        </member>
+        <member name="F:ViDi2.Training.UI.ViewModels.EditingMode.Mask">
+            <summary>
+            Edit the views mask
+            </summary>
+        </member>
+        <member name="F:ViDi2.Training.UI.ViewModels.EditingMode.Regions">
+            <summary>
+            Edit the view's regions (red tool)
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.IViewerViewModel">
+            <summary>
+            Interface implemented by a marking viewer
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IViewerViewModel.UIView">
+            <summary>
+            Reference to the user control for which this object is the DataContext
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IViewerViewModel.DisplayChannelFormat">
+            <summary>
+            Gets or sets the image Format of the displayed Image
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IViewerViewModel.Image">
+            <summary>
+            Gets the Image of the Viewer
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IViewerViewModel.InvViewPose">
+            <summary>
+            Transform used to orient the image so the view is squared up in screen coordinates
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IViewerViewModel.ResetZoom">
+            <summary>
+            Command to zoom the view to fit the available screen space
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IViewerViewModel.Remove">
+            <summary>
+            Remove the image of this view from the database
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IViewerViewModel.Rename">
+            <summary>
+            Rename the image of this view in the database
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IViewerViewModel.AddSampleToSet">
+            <summary>
+            Add the image of this view to a set
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IViewerViewModel.ViewInfo">
+            <summary>
+            Formatted string containing information about the view
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IViewerViewModel.ViewKey">
+            <summary>
+            Gets or sets the ViewKey of the view that this view model wraps
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IViewerViewModel.ViewKeyString">
+            <summary>
+            String representation of the currently selected <see cref="P:ViDi2.Training.UI.ViewModels.IViewerViewModel.ViewKey"/>
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IViewerViewModel.Zoom">
+            <summary>
+            Gets the current zoom factor of the view for the screen, setting not supported
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IViewerViewModel.ContextMenuViewModel">
+            <summary>
+            List of MenuItemViewModels represents the context menu for the Viewer
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IViewerViewModel.ViewFocused">
+            <summary>
+            Gets whether the current view is focused
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.IViewSetsViewModel">
+            <summary>
+            Common interface for view models representing an <see cref="T:ViDi2.IMarking"/> of an <see cref="T:ViDi2.Training.IDatabase"/>
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IViewSetsViewModel.Database">
+            <summary>
+            Database for the view model
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IViewSetsViewModel.Marking">
+            <summary>
+            Marking for the view model
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IViewSetsViewModel.ViewKey">
+            <summary>
+            ViewKey for the view model
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.ViewModels.IWorkspaceItemViewModel">
+            <summary>
+            Interface which represents a reusable workspace view model child of a <see cref="T:ViDi2.Training.UI.IWorkspaceBrowserViewModel"/>
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IWorkspaceItemViewModel.Parent">
+            <summary>
+            Reference back up the parent which hold this object
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.ViewModels.IWorkspaceItemViewModel.Workspace">
+            <summary>
+            Workspace assigned to this view model
+            </summary>
+        </member>
+        <member name="T:ViDi2.Training.UI.IWorkspaceBrowserViewModel">
+            <summary>
+            Interface which represents the business logic behind the <see cref="T:ViDi2.Training.UI.IWorkspaceBrowser"/>
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IWorkspaceBrowserViewModel.View">
+            <summary>
+            Reference to the view of the workspace browser
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IWorkspaceBrowserViewModel.Control">
+            <summary>
+            Gets or sets the underlying control instance
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IWorkspaceBrowserViewModel.CurrentWorkspace">
+            <summary>
+            Gets or sets the currently selected workspace
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IWorkspaceBrowserViewModel.WorkspaceList">
+            <summary>
+            List of view models representing each workspace in the control
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IWorkspaceBrowserViewModel.SelectedWorkspaceItemViewModel">
+            <summary>
+            The currently selected <see cref="T:ViDi2.Training.UI.ViewModels.IWorkspaceItemViewModel"/> in the <see cref="P:ViDi2.Training.UI.IWorkspaceBrowserViewModel.WorkspaceList"/>
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IWorkspaceBrowserViewModel.StatusItemContainer">
+            <summary>
+            Gets or sets the container to place status items
+            </summary>
+            <remarks>this is typically the item collection of a <see cref="T:System.Windows.Controls.Primitives.StatusBar"/></remarks>
+        </member>
+        <member name="P:ViDi2.Training.UI.IWorkspaceBrowserViewModel.Filter">
+            <summary>
+            String for filtering for workspaces in the control
+            </summary>
+        </member>
+        <member name="P:ViDi2.Training.UI.IWorkspaceBrowserViewModel.ExportToService">
+            <summary>
+            Delegate invoked when a workspace is exported to a service
+            </summary>
+        </member>
+        <member name="E:ViDi2.Training.UI.IWorkspaceBrowserViewModel.WorkspaceSelected">
+            <summary>
+            Occurs when a workspace was selected
+            </summary>
+        </member>
+    </members>
+</doc>
