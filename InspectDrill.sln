@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InspectDrill", "BeckhoffBasler\InspectDrill.csproj", "{6BE72816-19A4-47A3-BD4B-A1912135DC14}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FB1BD98D-265C-42BF-92DE-B1AC06664D04}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BE72816-19A4-47A3-BD4B-A1912135DC14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BE72816-19A4-47A3-BD4B-A1912135DC14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BE72816-19A4-47A3-BD4B-A1912135DC14}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6BE72816-19A4-47A3-BD4B-A1912135DC14}.Debug|x86.Build.0 = Debug|Any CPU
+		{6BE72816-19A4-47A3-BD4B-A1912135DC14}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BE72816-19A4-47A3-BD4B-A1912135DC14}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{6BE72816-19A4-47A3-BD4B-A1912135DC14}.Release|x86.ActiveCfg = Release|x86
+		{6BE72816-19A4-47A3-BD4B-A1912135DC14}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1932C03C-6B6F-4AAD-AC11-CA32CD73463C}
+	EndGlobalSection
+EndGlobal
