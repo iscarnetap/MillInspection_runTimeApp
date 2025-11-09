@@ -270,6 +270,7 @@ namespace RuntimeMultiGPU2
         double m_dTotalFrontCognexTime=0;
         string m_sTotalFrontCognexTime = "";
 
+        public int _eSnapShotStrategy = -1;
 
         HashSet<string> sInferenceResults = new HashSet<string>();
         bool bDataInControlsChanged = false;
@@ -939,9 +940,9 @@ namespace RuntimeMultiGPU2
             if (bUse2GPUs)
             {
                 StreamDict.Add(wsName, control.Workspaces.Add(wsName, wsPath, "default/Analyze/0").Streams["default"]);
-                StreamDict.Add(wsName+"1", control.Workspaces.Add(wsName+"1", wsPath, "default/Analyze/1").Streams["default"]);
-                StreamDict.Add(wsName + "2", control.Workspaces.Add(wsName + "2", wsPath, "default/Analyze/0").Streams["default"]);
-                StreamDict.Add(wsName + "3", control.Workspaces.Add(wsName + "3", wsPath, "default/Analyze/1").Streams["default"]);
+                //StreamDict.Add(wsName+"1", control.Workspaces.Add(wsName+"1", wsPath, "default/Analyze/1").Streams["default"]);
+                //StreamDict.Add(wsName + "2", control.Workspaces.Add(wsName + "2", wsPath, "default/Analyze/0").Streams["default"]);
+                //StreamDict.Add(wsName + "3", control.Workspaces.Add(wsName + "3", wsPath, "default/Analyze/1").Streams["default"]);
                 //StreamDict.Add(wsName + "4", control.Workspaces.Add(wsName + "4", wsPath, "default/Analyze/0").Streams["default"]);
                 //StreamDict.Add(wsName + "5", control.Workspaces.Add(wsName + "5", wsPath, "default/Analyze/0").Streams["default"]);
                 //StreamDict.Add(wsName + "6", control.Workspaces.Add(wsName + "6", wsPath, "default/Analyze/0").Streams["default"]);
@@ -3139,6 +3140,7 @@ namespace RuntimeMultiGPU2
         {
             string sReportInferenceResults = "";
             int iRegionNumber = 0;
+            //double dY0CorrectedForGeographicROI = 0.0;
 
             string sReportInferenceResultsPerformance = "ReportInferenceResults";
             var swShowRegions1 = Stopwatch.StartNew();
@@ -3154,42 +3156,53 @@ namespace RuntimeMultiGPU2
             {
                 // sReportInferenceResultsPerformance += $"ReportInferenceResult Mark 3 {swShowRegions1.ElapsedTicks} \n";
                 bool bReportDefect = false;
-                if (bISFractions)
+
+                //if the image is cropped based on geographic ROI, report all defects found, as they are already cropped
+                if (_eSnapShotStrategy== 2)
                 {
-                    //if (item.Area >= endmills[CmbCatNum.SelectedIndex].FracLowerArea &&
-                    //    item.Score >= endmills[CmbCatNum.SelectedIndex].FracLowerThresholdFront)
-                    {
-                        //if we are checking results for ROI (1) and we asked for a fractions model for this ROI (1) && asked to use this ROI (1) && 
-                        //it's contained in ROI (1)
-                        if (iROI == 1 && chkFractions1.Checked && chkROI1.Checked && IsRegionInDefectRoi(item, iROI))
-                            bReportDefect = true;
-                        //if we are checking results for ROI (2) and ...
-                        if (iROI == 2 && chkFractions2.Checked && chkROI2.Checked && IsRegionInDefectRoi(item, iROI))
-                            bReportDefect = true;
-                        //if we are checking results for ROI (3) and ...
-                        if (iROI == 3 && chkFractions3.Checked && chkROI3.Checked && IsRegionInDefectRoi(item, iROI))
-                            bReportDefect = true;
-                    }
+                    bReportDefect = true;
                 }
                 else
                 {
-                    //if (item.Area >= endmills[CmbCatNum.SelectedIndex].PeelLowerArea &&
-                    //    item.Score >= endmills[CmbCatNum.SelectedIndex].PeelLowerThresholdFront)
+                    if (bISFractions)
                     {
-                        //if we are checking results for ROI (1) and we asked for a peels model for this ROI (1) && asked to use this ROI (1) && 
-                        //it's contained in ROI (1)
-                        if (iROI == 1 && chkPeels1.Checked && chkROI1.Checked && IsRegionInDefectRoi(item, iROI))
-                            bReportDefect = true;
-                        //if we are checking results for ROI (2) and ...
-                        if (iROI == 2 && chkPeels2.Checked && chkROI2.Checked && IsRegionInDefectRoi(item, iROI))
-                            bReportDefect = true;
-                        //if we are checking results for ROI (3) and ...
-                        if (iROI == 3 && chkPeels3.Checked && chkROI3.Checked && IsRegionInDefectRoi(item, iROI))
-                            bReportDefect = true;
+                        //if (item.Area >= endmills[CmbCatNum.SelectedIndex].FracLowerArea &&
+                        //    item.Score >= endmills[CmbCatNum.SelectedIndex].FracLowerThresholdFront)
+                        {
+                            //if we are checking results for ROI (1) and we asked for a fractions model for this ROI (1) && asked to use this ROI (1) && 
+                            //it's contained in ROI (1)
+                            if (iROI == 1 && chkFractions1.Checked && chkROI1.Checked && IsRegionInDefectRoi(item, iROI))
+                                bReportDefect = true;
+                            //if we are checking results for ROI (2) and ...
+                            if (iROI == 2 && chkFractions2.Checked && chkROI2.Checked && IsRegionInDefectRoi(item, iROI))
+                                bReportDefect = true;
+                            //if we are checking results for ROI (3) and ...
+                            if (iROI == 3 && chkFractions3.Checked && chkROI3.Checked && IsRegionInDefectRoi(item, iROI))
+                                bReportDefect = true;
+                        }
+                    }
+                    else
+                    {
+                        //if (item.Area >= endmills[CmbCatNum.SelectedIndex].PeelLowerArea &&
+                        //    item.Score >= endmills[CmbCatNum.SelectedIndex].PeelLowerThresholdFront)
+                        {
+                            //if we are checking results for ROI (1) and we asked for a peels model for this ROI (1) && asked to use this ROI (1) && 
+                            //it's contained in ROI (1)
+                            if (iROI == 1 && chkPeels1.Checked && chkROI1.Checked && IsRegionInDefectRoi(item, iROI))
+                                bReportDefect = true;
+                            //if we are checking results for ROI (2) and ...
+                            if (iROI == 2 && chkPeels2.Checked && chkROI2.Checked && IsRegionInDefectRoi(item, iROI))
+                                bReportDefect = true;
+                            //if we are checking results for ROI (3) and ...
+                            if (iROI == 3 && chkPeels3.Checked && chkROI3.Checked && IsRegionInDefectRoi(item, iROI))
+                                bReportDefect = true;
+                        }
                     }
                 }
 
                 // sReportInferenceResultsPerformance += $"ReportInferenceResult Mark 4 {swShowRegions1.ElapsedTicks} \n";
+                //dY0CorrectedForGeographicROI =
+                //    item.Center.Y;// - (bCurrentSnapShotAOIGeographicROIBasedImages ? CalcHighestCroppingTop(100) : 0);
 
                 //Write the results anyway for the log while debugging
                 sReportInferenceResults = (iCycleNum + 1).ToString("00") + " " 
@@ -3200,7 +3213,7 @@ namespace RuntimeMultiGPU2
                     "Perimeter=" + item.Perimeter.ToString() + " " +
                     "Ourer=" + item.Outer.Count.ToString() + " " +
                     "X0=" + item.Center.X.ToString() + " " +
-                    "Y0=" + item.Center.Y.ToString() + " " +
+                    " Y0=" + item.Center.Y.ToString() + " " +
                     "H=" + item.Height.ToString() + " " +
                     "W=" + item.Width.ToString();
                 iRegionNumber++;
@@ -4276,6 +4289,7 @@ namespace RuntimeMultiGPU2
                     regionFound[index].H = item.Height;
                     regionFound[index].W = item.Width;
                     string[] res1 = new string[redview.Regions.Count];
+
                     res1[index] = (CycleNum+1).ToString("00") +" "
                         //+ (index).ToString() 
                         + " ROI:" + reg.ToString() + " " + "Peels: " + "Score=" + regionFound[index].score.ToString() + " " +
