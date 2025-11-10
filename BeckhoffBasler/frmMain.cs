@@ -1083,6 +1083,7 @@ namespace RuntimeMultiGPU2
                 //image = new WpfImage(@"C:\Rejects\7271583_5667916\1 25-09-11 10-55-13\snap15.jpg");
                 using (ISample sample = grunTimeWorkapace.StreamDict[wsName].CreateSample(image))
                 {
+                    Console.WriteLine($"Height: {image.Height}, Width: {image.Width}, num: {num}");
                     // process all tools on stream with specific gpu(gpuId)
                     sample.Process(null, new List<int>() { gpuId });
 
@@ -4443,6 +4444,7 @@ namespace RuntimeMultiGPU2
                             {
                                 onload = true;
                                 pictureBoxInspect.Image = (Bitmap)Bitmap.FromStream(file); // Image.FromFile(EndData.ImagePath);
+                                pictureBoxCatalogue.Image = (Bitmap)Bitmap.FromStream(file); // Image.FromFile(EndData.ImagePath);
                                 file.Close();
 
                             }
@@ -4978,6 +4980,11 @@ namespace RuntimeMultiGPU2
         bool mousemove = false;
         private void pictureBoxInspect_Paint(object sender, PaintEventArgs e)
         {
+            DrawROI(sender, e, pictureBoxInspect);
+        }
+
+        private void DrawROI(object sender, PaintEventArgs e, PictureBox pictureBox)
+        {
             if (!chkShowImage.Checked) return;
                 //return;
                 //if (!paint) return;
@@ -4988,11 +4995,11 @@ namespace RuntimeMultiGPU2
                 Pen p = new Pen(Color.Red);
                 Double y01 = 0;
 
-                pictureBoxInspect.Height = (int)(pictureBoxInspect.Width * 3648.0f / 5472.0f);
+                pictureBox.Height = (int)(pictureBox.Width * 3648.0f / 5472.0f);
                 //3648.0f / 5472.0f image for learning from C:\Project\4.2.2025\InspectSolution\setUpApplication\images
-                pictureBoxInspect.SizeMode = PictureBoxSizeMode.StretchImage;
-                scaleW = (Single)pictureBoxInspect.Width / (Single)pictureBoxInspect.Image.Width;
-                scaleH = (Single)pictureBoxInspect.Height / (Single)pictureBoxInspect.Image.Height;
+                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                scaleW = (Single)pictureBox.Width / (Single)pictureBox.Image.Width;
+                scaleH = (Single)pictureBox.Height / (Single)pictureBox.Image.Height;
                 if (bROI[0])
                 {
                    
@@ -5114,8 +5121,9 @@ namespace RuntimeMultiGPU2
                 txtPosY3.Text = ((int)((mouse_dwnY / scaleH))).ToString();
             }
             pictureBoxInspect.Refresh();
+            pictureBoxCatalogue.Refresh();
         }
-        
+
         private void pictureBoxInspect_MouseUp(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             mouse_upX = e.X;
@@ -5140,6 +5148,7 @@ namespace RuntimeMultiGPU2
                 txtHeight3.Text = ((int)((h) / scaleH)).ToString();
             }
             pictureBoxInspect.Refresh();
+            pictureBoxCatalogue.Refresh();
         }
         Double w = 0;
         Double h = 0;
@@ -5175,6 +5184,7 @@ namespace RuntimeMultiGPU2
                         txtHeight3.Text = ((int)((e.Y - mouse_dwnY) / scaleH)).ToString();
                     }
                     pictureBoxInspect.Refresh();
+                    pictureBoxCatalogue.Refresh();
                 }
             }
             catch (System.Exception ex) { }
@@ -6587,6 +6597,26 @@ namespace RuntimeMultiGPU2
                 btnOperatorTechnician.Text = "Technologist";
             }
             ApplyRecursive(this);
+        }
+
+        private void pictureBoxCatalogue_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            pictureBoxInspect_MouseDown(sender, e);
+        }
+
+        private void pictureBoxCatalogue_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            pictureBoxInspect_MouseMove(sender, e);
+        }
+
+        private void pictureBoxCatalogue_MouseUp(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            pictureBoxInspect_MouseUp(sender, e);
+        }
+
+        private void pictureBoxCatalogue_Paint(object sender, PaintEventArgs e)
+        {
+            DrawROI(sender, e, pictureBoxCatalogue);
         }
         ///////////
 
