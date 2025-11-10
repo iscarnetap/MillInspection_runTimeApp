@@ -892,15 +892,13 @@
             // 
             this.pictureBoxInspect.BackColor = System.Drawing.Color.White;
             this.pictureBoxInspect.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxInspect.Enabled = false;
             this.pictureBoxInspect.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInspect.Image")));
-            this.pictureBoxInspect.Location = new System.Drawing.Point(275, 557);
+            this.pictureBoxInspect.Location = new System.Drawing.Point(-278, -319);
             this.pictureBoxInspect.Name = "pictureBoxInspect";
             this.pictureBoxInspect.Size = new System.Drawing.Size(327, 207);
             this.pictureBoxInspect.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxInspect.TabIndex = 136;
             this.pictureBoxInspect.TabStop = false;
-            this.pictureBoxInspect.Visible = false;
             this.pictureBoxInspect.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBoxInspect_Paint);
             this.pictureBoxInspect.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBoxInspect1_MouseDown);
             this.pictureBoxInspect.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxInspect_MouseMove);
@@ -1108,7 +1106,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.pictureBoxCatalogue);
             this.tabPage1.Controls.Add(this.btnInit);
             this.tabPage1.Controls.Add(this.txtListBox1);
             this.tabPage1.Controls.Add(this.lblAll);
@@ -1131,6 +1128,7 @@
             this.tabPage1.Controls.Add(this.txtPeelLower);
             this.tabPage1.Controls.Add(this.lblTestNum);
             this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Controls.Add(this.pictureBoxInspect);
             this.tabPage1.Controls.Add(this.lblCycleTime);
             this.tabPage1.Controls.Add(this.txtFractionLower);
             this.tabPage1.Controls.Add(this.groupBox2);
@@ -1145,7 +1143,7 @@
             this.tabPage1.Controls.Add(this.lblDuration);
             this.tabPage1.Controls.Add(this.label34);
             this.tabPage1.Controls.Add(this.label41);
-            this.tabPage1.Controls.Add(this.pictureBoxInspect);
+            this.tabPage1.Controls.Add(this.pictureBoxCatalogue);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
