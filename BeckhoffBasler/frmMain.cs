@@ -20,6 +20,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Security;
 using System.ServiceModel.Channels;
@@ -6624,6 +6625,45 @@ namespace RuntimeMultiGPU2
         private void pictureBoxCatalogue_Paint(object sender, PaintEventArgs e)
         {
             DrawROI(sender, e, pictureBoxCatalogue);
+        }
+
+
+        public void ComposeException(System.Exception ex, [CallerMemberName] string sCallerName = "")
+        {
+            System.Windows.Forms.MessageBox.Show($"Error in {sCallerName}: {ex.Message}");
+        }
+
+        private void btnUpdateCatalogueImage_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string ImagePath = AppDomain.CurrentDomain.BaseDirectory;
+                string ImagePathImagePathDestination = "";
+                string sCatalogueItemName = CmbCatNum.SelectedItem.ToString();
+                ImagePathImagePathDestination = ImagePath + "\\Data\\" + sCatalogueItemName + ".jpg";
+                string ImagePathImagePathSource = ImagePath + @"Images\snap1.jpg";
+
+                DialogResult aDialogResult = System.Windows.Forms.MessageBox.Show(
+                    $"Are you sure you want to REPLACE the image of {sCatalogueItemName} With the image in {ImagePathImagePathSource}. "+
+                    "Pressing OK will also save ALL your changes",
+                    $"REPLACE the image of {sCatalogueItemName}", MessageBoxButtons.OKCancel);
+
+                if (aDialogResult == DialogResult.OK)
+                {
+                    File.Copy(ImagePath + @"Images\snap1.jpg", ImagePathImagePathDestination,true);
+                    EndData.ImagePath = ImagePathImagePathDestination;
+                    SaveROI(sender, e);
+                    var oSaveSelectedItem = CmbCatNum.SelectedItem;
+                    CmbCatNum.SelectedItem = null;
+                    CmbCatNum.SelectedItem = oSaveSelectedItem;
+                    pictureBoxCatalogue.Refresh();
+                    //CmbCatNum_SelectedValueChanged(sender, e);
+                }
+            }
+            catch(System.Exception ex) 
+            {
+                ComposeException(ex);
+            }
         }
         ///////////
 

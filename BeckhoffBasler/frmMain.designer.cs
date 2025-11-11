@@ -188,6 +188,7 @@
             this.lblDefect1 = new System.Windows.Forms.Label();
             this.lblNoDefects1 = new System.Windows.Forms.Label();
             this.pictureBoxCatalogue = new System.Windows.Forms.PictureBox();
+            this.btnUpdateCatalogueImage = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -218,7 +219,7 @@
             this.CmbCatNum.FormattingEnabled = true;
             this.CmbCatNum.Location = new System.Drawing.Point(199, 26);
             this.CmbCatNum.Name = "CmbCatNum";
-            this.CmbCatNum.Size = new System.Drawing.Size(335, 23);
+            this.CmbCatNum.Size = new System.Drawing.Size(262, 23);
             this.CmbCatNum.TabIndex = 7;
             this.CmbCatNum.SelectedIndexChanged += new System.EventHandler(this.CmbCatNum_SelectedIndexChanged);
             this.CmbCatNum.SelectionChangeCommitted += new System.EventHandler(this.CmbCatNum_SelectionChangeCommitted);
@@ -1106,6 +1107,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnUpdateCatalogueImage);
             this.tabPage1.Controls.Add(this.btnInit);
             this.tabPage1.Controls.Add(this.txtListBox1);
             this.tabPage1.Controls.Add(this.lblAll);
@@ -1218,7 +1220,7 @@
             // 
             // btnNewCatalogItem
             // 
-            this.btnNewCatalogItem.Location = new System.Drawing.Point(540, 25);
+            this.btnNewCatalogItem.Location = new System.Drawing.Point(467, 26);
             this.btnNewCatalogItem.Name = "btnNewCatalogItem";
             this.btnNewCatalogItem.Size = new System.Drawing.Size(88, 23);
             this.btnNewCatalogItem.TabIndex = 466;
@@ -1971,6 +1973,16 @@
             this.pictureBoxCatalogue.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxCatalogue_MouseMove);
             this.pictureBoxCatalogue.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBoxCatalogue_MouseUp);
             // 
+            // btnUpdateCatalogueImage
+            // 
+            this.btnUpdateCatalogueImage.Location = new System.Drawing.Point(561, 26);
+            this.btnUpdateCatalogueImage.Name = "btnUpdateCatalogueImage";
+            this.btnUpdateCatalogueImage.Size = new System.Drawing.Size(97, 23);
+            this.btnUpdateCatalogueImage.TabIndex = 472;
+            this.btnUpdateCatalogueImage.Text = "Update Image";
+            this.btnUpdateCatalogueImage.UseVisualStyleBackColor = true;
+            this.btnUpdateCatalogueImage.Click += new System.EventHandler(this.btnUpdateCatalogueImage_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2186,6 +2198,7 @@
         private System.Windows.Forms.TabPage tabPageAdmin;
         private System.Windows.Forms.Button btnOperatorTechnician;
         public System.Windows.Forms.PictureBox pictureBoxCatalogue;
+        private System.Windows.Forms.Button btnUpdateCatalogueImage;
     }
 }
 
