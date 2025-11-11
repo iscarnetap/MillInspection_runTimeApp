@@ -100,6 +100,10 @@ namespace RuntimeMultiGPU2
         public bool bDefectFoundInTopInspection=false;
         public bool bDefectFoundInFrontInspection = false;
 
+        //bTakingSnapshotForColorHistogramCheck: signalling the frmMainInspect snapshots for color histogram check are no longer being taken
+        //so it will not search for defects in that image
+        public bool bTakingSnapshotForColorHistogramCheck = false;
+
         public void RegisterOperatorAllowed(params System.Windows.Forms.Control[] controls)
         {
             foreach (var c in controls)
@@ -2276,10 +2280,13 @@ namespace RuntimeMultiGPU2
                 for (int i = 0; i < numBufferSize; i++)
                 {
 
-                    
-                        while (imageCle == null ||
+                    //bTakingSnapshotForColorHistogramCheck: signalling the frmMainInspect snapshots for color histogram check are no longer being taken
+                    //so it will not search for defects in that image
+
+                    while (imageCle == null ||
                             imageCle.Length <= i ||
-                            imageCle[i] == null || (i < numBufferSize  && imageCle[i] == null) || SnapFile[i]=="")
+                            imageCle[i] == null || (i < numBufferSize  && imageCle[i] == null) || SnapFile[i]==""
+                            || bTakingSnapshotForColorHistogramCheck)
                             //imageCle[i] == null || (i < numBufferSize - 1 && imageCle[i + 1] == null))
                         {
                             Thread.Sleep(10);
